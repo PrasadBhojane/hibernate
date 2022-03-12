@@ -6,10 +6,4 @@ public interface CustomerService {
 
 	public String saveCustomer(Customer customer) throws Exception;
 	
-	public Customer readCustomer(Integer id);
-
-	public String deleteById(Integer i);
-	
-
-	
 }

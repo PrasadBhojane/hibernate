@@ -17,20 +17,16 @@ public class HibernateUtil {
 	        if (sessionFactory == null) {
 	            try {
 	                Configuration configuration = new Configuration();
-
-	                // Hibernate settings equivalent to hibernate.cfg.xml's properties
 	                Properties settings = new Properties();
 	                settings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
-	                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/cms");
+	                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/cms2");
 	                settings.put(Environment.USER, "root");
 	                settings.put(Environment.PASS, "Prb9595050220$");
 	                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 
 	                settings.put(Environment.SHOW_SQL, "true");
 
-	                //settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-
-	                settings.put(Environment.HBM2DDL_AUTO, "update");
+	                settings.put(Environment.HBM2DDL_AUTO, "create");
 
 	                configuration.setProperties(settings);
 
